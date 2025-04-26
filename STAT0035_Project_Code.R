@@ -1022,13 +1022,6 @@ anova(model_final, model_15, test="F")
 cor(combined_data23$STAT0003_ICA,combined_data23$STAT0003_exam, use = "complete.obs", method="pearson")
 cor(combined_data$STAT0003_ICA,combined_data$STAT0003_exam, use = "complete.obs")
 
-#Durbin Watson test for model_final
-durbinWatsonTest(model_final)
-
-dwtest(model_final,alternative = "two.sided")
-dwtest(model_final,alternative = "greater")
-dwtest(model_final,alternative = "less")
-
 # Extract residuals
 residuals_final <- residuals(model_final)
 standardised_residuals<-rstandard(model_final)
